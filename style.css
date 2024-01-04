@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Outfit:wght@700&display=swap');
+
+
+:root { 
+    --color-golden: #DCCA87;
+    --color-black: #0C0C0C;
+    --color-gray: #404040;
+    --color-crimson: #F5EFDB;
+    --color-grey: #AAAAAA;
+    --color-white: #FFFFFF;
+    --color-brown: #301612;
+    --color-content: #406D69;
+
+    --font-base: 'Outfit', sans-serif;
+    --font-alt: 'Open Sans', sans-serif;
+
+    overflow: hidden !important;
+    
+}
+
+
+@keyframes shake {
+    0% {
+      left: -5px;
+    }
+    100% {
+      right: -5px;
+    }
+}
+
+.hero-body {
+    padding: 0;
+}
+
+.overlay {
+    /* background: var(--color-golden); */
+    background: url('./assets/waterfalls.gif') no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.title-overlay {    
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;  
+    padding: 1rem 2rem;    
+}
+
+.title-overlay p {
+    font-family: var(--font-base);
+    color: var(--color-golden);
+    font-size: 3rem;
+    
+}
+
+.title-footer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    left: 15rem;
+}
+
+.title-footer a {
+    font-family: var(--font-alt);
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+
+.title-footer a:hover {
+    color: var(--color-golden);
+    transition: color 500ms ease;
+    
+}
+
+.info {
+    padding: 0 5rem;
+    padding-top: 5rem;
+}
+
+
+.long-paragraph {
+    font-family: var(--font-base);
+    color: var(--color-white);
+    font-size: 2.5rem;
+}
+
+.statement {
+    font-family: var(--font-base);
+    color: var(--color-white);
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    text-align: left;
+}
+
+
+.content {
+    background: var(--color-content);
+    padding: 0; 
+    min-height: 100vh;
+}
+
+.form {
+    padding: 0 5rem;
+    padding-top: 3rem;
+}
+
+.form .suggestion {
+    font-size: 15px;
+    font-family: var(--font-alt);
+    color: var(--color-golden);
+}
+
+.button-container .log-in {
+    color: var(--color-brown);
+    text-decoration: none;
+}
+
+.button-container .log-in:hover {
+    color: var(--color-crimson);
+    transition: color 500ms ease;
+}
+
+
+.field .input-tags {
+    font-size: 15px;
+    font-family: var(--font-alt);
+    color: var(--color-golden);
+}
+
+.field .input::placeholder {
+    font-family: var(--font-alt);   
+    color: var(--color-gray);
+}
+
+.field .input {
+    border: none; 
+    background: transparent;  
+    border-bottom: 1px solid var(--color-brown);
+
+}
+
+
+.field .input:required {
+    border: none;
+    animation: none;
+    border-bottom: 1px solid var(--color-brown);
+}
+
+.field .input.invalid {
+    border: 1px solid red;
+    animation: shake .1s linear;
+    animation-iteration-count: 3;
+}
+
+.field .input:focus {
+    outline: none;
+    border-bottom: 0;
+    border: 1px solid var(--color-golden); 
+    box-shadow: 5px 5px var(--color-black);   
+}
+
+.field .input:hover {
+    border: 1px solid var(--color-golden);
+    transition: border 500ms ease;
+    
+}
+
+.field .fa {
+    color: var(--color-crimson);
+}
+
+.button-container{
+    margin-top: 2rem;
+}
+
+.button-container button {
+    background: var(--color-golden);
+    border: none;
+    color: var(--color-gray);
+    font-family: var(--font-base);
+
+}
+
+.button-container button:hover {
+    color: var(--color-black);
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 500ms ease;
+}
+
+
+
+@media screen and (max-width: 1500px) {
+    body {
+        overflow-y: scroll;
+    }
+
+    .everything {
+        flex-direction: column;
+    }
+
+
+    .overlay {
+        height: 110vh;
+        width: 100% !important;
+
+    }
+
+
+    .title-overlay p {
+        font-size: 5rem;
+    }
+
+    .title-footer {
+        position: absolute;
+        margin-bottom: 1rem;
+        font-size: 25px;
+        
+    } 
+     
+    
+    .content {
+        width: 100% !important;
+        padding-bottom: 2rem;
+    }
+
+    .long-paragraph, .statement {
+        font-size: 2.5rem;
+    }
+
+
+}
+
+
+@media screen and (max-width: 650px) {
+
+    .title-footer {
+        position: absolute;
+        margin-bottom: 1rem;
+        left: 8rem;
+    }    
+
+    .long-paragraph, .statement {
+        font-size: 1.5rem;
+    }
+    
+    .button-container {
+        height: 5rem;
+    }
+
+    .content {
+        padding-bottom: 2rem;
+    }
+}
