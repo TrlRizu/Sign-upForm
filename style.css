@@ -14,7 +14,7 @@
     --font-base: 'Outfit', sans-serif;
     --font-alt: 'Open Sans', sans-serif;
 
-    overflow: hidden !important;
+    overflow: hidden;
     
 }
 
@@ -194,7 +194,7 @@
 
 
 @media screen and (max-width: 1500px) {
-    body {
+    :root {
         overflow-y: scroll;
     }
 
